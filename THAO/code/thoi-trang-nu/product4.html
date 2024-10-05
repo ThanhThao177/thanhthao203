@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="vn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Sản Phẩm</title>
+    <!-- css -->
+    <link rel="stylesheet" href="../css/Navbar.css">
+    <link rel="stylesheet" href="../css/products_list.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/chitietsp.css">
+    <!-- Icon -->
+    <script src="https://kit.fontawesome.com/951fcb8c3d.js" crossorigin="anonymous"></script>
+    <!-- Navbar effect -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Mulish:ital,wght@1,300&family=Roboto+Condensed&display=swap');
+        *{
+            font-family: 'Roboto Condensed', sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+
+    </style>
+    <header>
+        <div class="nav-left">
+            <ul class="nav-link">
+                <li class="menu-item">
+                    <a href="">Shop</a>
+                    <div class="menu-child">
+                        <div class="menu-child-item">
+                            <a href="shop-nam.html">Nam</a>
+                            <div class="menu-child">
+                                <div class="menu-child-item">
+                                    <a href="quan-nam.html">Quần nam</a>
+                                </div>
+                                <div class="menu-child-item">
+                                    <a href="ao-nam.html">Áo nam</a>
+                                </div>
+                                <div class="menu-child-item">
+                                    <a href="phu-kien-nam.html">Phụ kiện nam</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-child-item">
+                            <a href="../thoi-trang-nu/shop-nu.html">Nữ</a>
+                            <div class="menu-child">
+                                <div class="menu-child-item">
+                                    <a href="../thoi-trang-nu/quan-nu.html">Quần nữ</a>
+                                </div>
+                                <div class="menu-child-item">
+                                    <a href="../thoi-trang-nu/ao-nu.html">Áo nữ</a>
+                                </div>
+                                <div class="menu-child-item">
+                                    <a href="../thoi-trang-nu/chan-vay-nu.html">Chân váy nữ</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-child-item">
+                            <a href="">Sale off</a>
+                        </div>
+                    </div>
+                </li> 
+                
+            </ul>
+            <div class="search-text">
+                <input type="search" placeholder="Tìm sản phẩm">
+                <a class="search-btn" href="">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                
+            </div>
+            
+        </div>
+        <div class="logo">
+            <a href="../index.html">Thanh Thảo</a>
+        </div>
+        
+        <div class="nav-right">
+            <ul class="nav-link">
+                <li>
+                    <a id="btn-login" href="login.html">Đăng nhập</a>
+                    <div id="logged">
+                        <a><i class="fa-solid fa-user"></i><span id="tenkhachhang">Nguyễn Văn A</span></a>
+                        <div class="logged-option">
+                            <button onclick="LogOut()"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</button>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="../cart.html">Giỏ hàng</a></li>
+            </ul>
+        </div>
+        <!-- <ul class="user">
+            <li><a href="#"><ion-icon name="person-circle-outline"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="bag-handle-outline"></ion-icon></a></li>
+        </ul> -->
+    </header>
+
+
+        <!-- <div class="icon">
+            <a href="/THAO/code/login.html"><i class="fa-solid fa-user"></i></a>
+            <a href=""><i class="fa-solid fa-bag-shopping"></i></a>
+            <span class="quantity">0</span>
+            
+        </div> -->
+    <div class="small-container single-product">
+        <div class="row">
+            <div class="col-1">
+                <img src="../img/ao-nu/img5.png" width="100%" id="ProductImg">
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src="../img/ao-nu/img5.png" width="100%" id="small-img">
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+            <a class="ten" href="/THAO/code/index.html">Home</a>  
+            <h1 id="tensp">SET ÁO PHÔNG VÀ CHÂN VÁY CHỮ A KAKI - 10F21SHL003C</h1>
+            <div class="gia_items">
+                <a class="giam" >350,000đ - 500,000đ</a>
+                <p class="gia" ><span id="giasp">400.000</span></p>
+            </div>
+            <div class="product-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span><a id="daban">100,5K &nbsp Đã bán</a></span>
+            </div>
+            
+            <select id="mau">
+                <option>Chọn màu</option>
+                <option>Màu đen</option>
+                <option>Màu trắng</option>
+            </select>
+            <input type="number" name="soluong" min="1" max="10" value="1" id="sl">
+            <button class="them" onclick="addToCart({id:'01',image:'img/ao-nu/img5.png', price:320000, name:'SET ÁO PHÔNG VÀ CHÂN VÁY CHỮ A KAKI'})">Thêm vào giỏ hàng</button>       
+            <div class="social-links">
+                <p>Share At:</p>
+                <a href="#">
+                    <i class="fab fa-facebook"></i>
+                 </a>   
+                 <a href="#">
+                    <i class="fab fa-twitter"></i>
+                 </a>
+                 <a href="#">
+                    <i class="fab fa-instagram"></i>
+                 </a>
+            </div>
+            <h3>Chi tiết sản phẩm</h3>
+            <br>
+            <p><strong> SET ÁO PHÔNG VÀ CHÂN VÁY CHỮ A KAKI - 10F21SHL003C </strong>là set đồ hot trent 2023 <strong>Được nhiều các bạn trẻ yêu thích</strong> với phong cách mới mẻ cá tính  #beyourself chính là lời nhắn gửi tới một nửa xinh đẹp của thế giới. Hãy sẵn sàng phá bỏ định kiến, mạnh mẽ khẳng định bản thân và đừng quên yêu thương nâng niu bản thân mình nhé.</p>
+        </div>
+    </div>
+    <div id="showgiohang"></div>
+    <script src="../js/cart.js"></script>
+</body>
+</html> 
+
